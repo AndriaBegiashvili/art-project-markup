@@ -10,6 +10,9 @@
 img{
     width: 100%;
 }
+li{
+    overflow-y: hidden;
+  }
 .container{
     padding:20px;
     width: 80rem;
@@ -44,7 +47,6 @@ a{
     line-height: 22px;
     color: #000000;
 }
-
 .background{
     border-bottom: solid 2px black;
 }
@@ -62,13 +64,14 @@ a{
     font-size: 12px;
     background-color: white;
     font-weight: bold;
+    
 }
 .primary_btn:hover{
+    
     background: black;
     color: white;
-    transition: 0.2s;    
+    transition: 0.2s; 
 }
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -102,26 +105,6 @@ a{
     padding: 106px auto;
     margin-top: 20px;
   }
-  .second{
-    display: flex;
-    gap: 50px;
-    margin-top: 58px;
-  }
-  .second_first{
-    width: 50%;
-  }
-  .second_second{
-    margin: auto 0;
-    width: 50%;
-
-  }
-  .second_second h2{
-    font-size: 50px;
-
-  }
-  .second_second p{
-    font-size: 20px;
-  }
   .h3_cont{
     border-bottom: solid 2px black;
   }
@@ -135,43 +118,7 @@ a{
     margin-left: 60px;
     margin-bottom: 10px;
   }
-
-.footer{
-    width: 100%;
-    height: 180px;
-    border-top: solid 1px grey;
-    background: rgb(241, 240, 238);
-    margin-top: 100px;
-}  
-.row_bottom{
-    display: flex;
-    justify-content: center;
-}
-.column{
-    width: 200px;
-}
-.column p{
-    font-weight: bold;
-}
-ul{
-    list-style-type: none;
-    
-
-}
-li{
-    overflow-y: hidden;
-}
-.card_foot {
-    width: 300px;
-    box-sizing: border-box;
-  }
-.row_icons{
-    display: flex;
-    gap:6px;
-    width: 100px;
-}  
-
-@media only screen and (max-width: 1320px) {
+  @media only screen and (max-width: 1320px) {
 
     .container{
         width: 90%;
@@ -212,7 +159,27 @@ li{
     }
   } 
 
-
+  .show_more{
+    border: solid 2p black;
+    width: 120px;
+    color: black;
+    font-weight: bold;
+    height: 30px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .show_more:hover{
+    background: black;
+    color: white;
+    transition: 0.2s;   
+  }
+  .cent{
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    padding-bottom: 30px;
+  }
 
 .top{
     animation: move;

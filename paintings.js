@@ -1,22 +1,14 @@
-API_URL = "https://api.artic.edu/api/v1/artworks"
-
+API_URL = `https://api.artic.edu/api/v1/artworks?page=`
 Img_link = "https://www.artic.edu/iiif/2/"
-//img id
 Img_ending = "/full/843,/0/default.jpg"
+let currentPage = 1;
 const main = document.querySelector("#main");
 
-getData(API_URL);
-async function getData(url) {
-    console.log(url);
-  
-    const res = await fetch(url);
-    console.log(res);
-  
+getData(API_URL, currentPage);
+  async function getData(url, page) {
+    const res = await fetch(`${url}${page}`);
     const data = await res.json();
-    console.log(data.data);
-  
     showPics(data.data);
-    
   }
 
   async function getPics(url){
@@ -39,7 +31,7 @@ async function getData(url) {
       element.innerHTML = `
                   
                   
-                    <div class="card">
+                    <div class="card top">
                     <img class='img'  src="${Img_link + image_id+Img_ending}" >
                         <div class="card-content">
                         <h3>${title}</h3>
@@ -52,4 +44,10 @@ async function getData(url) {
       main.appendChild(element); 
     });
   }  
-  
+
+const nextButton = document.querySelector(".show_more");
+nextButton.addEventListener("click", () => {
+  currentPage++;
+  console.log(currentPage);
+  getData(API_URL, currentPage);
+});
