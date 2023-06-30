@@ -166,7 +166,6 @@ a{
   }
   .footer{
     width: 100%;
-    height: 180px;
     border-top: solid 1px grey;
     background: rgb(241, 240, 238);
     margin-top: 100px;
@@ -294,9 +293,7 @@ li{
         justify-content: center;
         align-items: center;
       }
-    .footer{
-      height: 400px;
-    }
+
       }    
 
 .top{
