@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+}
+li{
+    overflow-y: hidden;
+  }
+.container{
+    padding:20px;
+    width: 80rem;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+  
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.mt-76{
+    margin-top: 76px;
+}
+.space-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.nav_link{
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+}
+.background{
+    border-bottom: solid 2px black;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.primary_btn{
+    height: 30px;
+    padding: 6px;
+    color: rgb(0, 0, 0);
+    border: solid 2px black;
+    cursor: pointer;
+    overflow-y: hidden;
+    font-size: 12px;
+    background-color: white;
+    font-weight: bold;
+}
+.primary_btn:hover{
+    background: black;
+    color: white;
+    transition: 0.2s;    
+}
+.info{
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+    gap:40px;
+}
+.card-content{
+    width: 40%;
+}
+.img_cont{
+    width: 40%;
+}
+.img{
+    height: 600px;
+    object-fit: contain;
+
+}
+P:not(.text){
+    font-weight: bold;
+}
+hr{
+    height: 2px;
+    background: black;
+    border: none;
+}
+.icon{
+    display: none;
+  }
+  .footer{
+    width: 100%;
+    height: 180px;
+    border-top: solid 1px grey;
+    background: rgb(241, 240, 238);
+    margin-top: 100px;
+
+}  
+.row_bottom{
+    display: flex;
+    justify-content: center;
+}
+.column{
+    width: 200px;
+}
+.column p{
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+    
+
+}
+li{
+    overflow-y: hidden;
+}
+.card_foot {
+    width: 300px;
+    box-sizing: border-box;
+  }
+.row_icons{
+    display: flex;
+    gap:6px;
+    width: 100px;
+}
+
+  @media only screen and (max-width: 518px) {
+    .nav_link{
+      display: none;
+    }
+    .primary_btn{
+      display: none;
+    }
+    .icon{
+      display: block;
+    }
+    }    
+    @media only screen and (max-width: 425px) {
+
+        .row_bottom{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+        }
+      .footer{
+        height: 400px;
+      }
+        }  

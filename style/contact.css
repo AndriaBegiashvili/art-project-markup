@@ -23,6 +23,9 @@ li{
     flex-wrap: nowrap;
   
 }
+.icon{
+  display: none;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -161,6 +164,41 @@ a{
     background: #000;
     color: white;
   }
+  .footer{
+    width: 100%;
+    height: 180px;
+    border-top: solid 1px grey;
+    background: rgb(241, 240, 238);
+    margin-top: 100px;
+
+}  
+.row_bottom{
+    display: flex;
+    justify-content: center;
+}
+.column{
+    width: 200px;
+}
+.column p{
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+    
+
+}
+li{
+    overflow-y: hidden;
+}
+.card_foot {
+    width: 300px;
+    box-sizing: border-box;
+  }
+.row_icons{
+    display: flex;
+    gap:6px;
+    width: 100px;
+}
   
   @media (max-width: 950px) {
     .container_contact{
@@ -235,7 +273,31 @@ a{
         font-size: 16px;
     }
   } 
+  @media only screen and (max-width: 518px) {
+    .nav_link{
+      display: none;
+    }
+    .primary_btn{
+      display: none;
+    }
+    .icon{
+      display: block;
+    }
+    }
+    @media only screen and (max-width: 425px) {
 
+      .row_bottom{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+    .footer{
+      height: 400px;
+    }
+      }    
 
 .top{
     animation: move;

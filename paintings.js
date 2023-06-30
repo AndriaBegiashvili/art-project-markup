@@ -23,14 +23,10 @@ getData(API_URL, currentPage);
     
     pics.forEach((pic) => {
       const { title, date_display, place_of_origin, artist_display, image_id } =
-        pic;
-        
+        pic;       
       const element = document.createElement("div");
       element.classList.add("col-4");
-  
-      element.innerHTML = `
-                  
-                  
+      element.innerHTML = `                   
                     <div class="card top">
                     <img class='img'  src="${Img_link + image_id+Img_ending}" >
                         <div class="card-content">
@@ -38,10 +34,13 @@ getData(API_URL, currentPage);
                         <p>${date_display}</p>
                       <p>${place_of_origin}</p>
                       <p>${artist_display}</p>
-                        </div>
-                   
+                        </div>                   
               `;
       main.appendChild(element); 
+      element.addEventListener("click", () => {
+        localStorage.setItem("pic", JSON.stringify(pic));
+        window.location = "artwork.html";
+      });
     });
   }  
 
