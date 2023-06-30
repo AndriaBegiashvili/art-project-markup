@@ -6,13 +6,13 @@ Img_link = "https://www.artic.edu/iiif/2/"
 Img_ending = "/full/843,/0/default.jpg"
 
 
-let words = picsData.publication_history.trim().split(' ');
+// let words = picsData.publication_history.trim().split(' ');
 
-  // Slice the array to get the first 600 words
-let first600Words = words.slice(0, 400);
+//   // Slice the array to get the first 600 words
+// let first600Words = words.slice(0, 400);
 
-  // Join the words back into a string
-let result = first600Words.join(' ');
+//   // Join the words back into a string
+// let result = first600Words.join(' ');
 
 
 const main = document.querySelector(".main")
@@ -32,7 +32,7 @@ element.innerHTML = `
                   <br/>
                 <p>${picsData.place_of_origin}</p><br/>
                 <p>${picsData.artist_display}</p><br/>
-                <p class="text">${result}</p>
+                <p class="text">${picsData.publication_history}</p>
                   </div>                   
         `;
 main.appendChild(element); 
